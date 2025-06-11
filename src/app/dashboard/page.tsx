@@ -4,7 +4,9 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '../components/Authcontext';
 
 export default function Dashboard() {
-  const { user } = useAuth();
+  const { user } = useAuth() ?? {};
+
+
   const router = useRouter();
 
   useEffect(() => {

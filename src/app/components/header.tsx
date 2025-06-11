@@ -5,7 +5,7 @@ import { useAuth } from './Authcontext';
 
 export default function Header() {
   const pathname = usePathname();
-  const { user, logout } = useAuth();
+const { user, logout } = useAuth() ?? {};
 
   return (
     <header className="bg-light p-3 border shadow">

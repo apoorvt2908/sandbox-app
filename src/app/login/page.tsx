@@ -12,7 +12,8 @@ interface User {
 
 
 export default function Login() {
-  const { user, login: loginUser, logout } = useAuth();
+  const { user, login: loginUser, logout } = useAuth() ?? {};
+
 
   const router = useRouter();
   const [email, setEmail] = useState('');
