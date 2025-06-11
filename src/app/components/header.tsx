@@ -25,7 +25,7 @@ const { user, logout } = useAuth() ?? {};
         {user ? (
           <>
             <span className="text-success fw-bold">Welcome, {user.name}</span>
-            <button className='btn btn-danger'onClick={logout} 
+            <button className='btn btn-primary'onClick={logout} 
             >Logout</button>
           </>
         ) : (
