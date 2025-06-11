@@ -1,12 +1,22 @@
 'use client';
 import { createContext, useContext, useState, useEffect } from 'react';
-import Router from 'next/router';
 
-interface AuthContextType {
-  user: any;
-  login: (userData: any) => void;
+
+
+// types.ts or AuthContext.tsx
+
+export interface User {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface AuthContextType {
+  user: User | null;
+  login: (userData: User) => void;
   logout: () => void;
 }
+
 
 const AuthContext = createContext<AuthContextType | null>(null);
 

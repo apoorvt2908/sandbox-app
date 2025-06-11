@@ -12,7 +12,7 @@ interface User {
 
 
 export default function Login() {
-  const { user, login: loginUser, logout } = useAuth() ?? {};
+  const { login: loginUser } = useAuth() ?? {};
 
 
   const router = useRouter();
